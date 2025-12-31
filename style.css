@@ -1,145 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
-
 :root {
-    --neon-blue: #00f3ff;
-    --neon-purple: #bc13fe;
-    --dark-bg: #050505;
-    --card-bg: #121212;
+    --primary: #6366f1;
+    --secondary: #a855f7;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
 }
 
 * {
     margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: white;
-    font-family: 'Rajdhani', sans-serif;
-    overflow-x: hidden;
+    background-color: var(--light);
+    color: var(--dark);
+    scroll-behavior: smooth;
 }
 
-/* Background Animasi Berjalan */
-.bg-animation {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%);
-    z-index: -1;
+.container { width: 85%; max-width: 1200px; margin: auto; }
+.section-padding { padding: 100px 0; }
+
+/* HEADER & NAV */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed; width: 100%; top: 0; z-index: 1000;
+    padding: 20px 0; border-bottom: 1px solid #ddd;
 }
 
-/* Navigasi Melayang (Floating Navbar) */
-nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px 30px;
-    border-radius: 50px;
-    display: flex;
-    gap: 30px;
-    z-index: 1000;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
+nav { display: flex; justify-content: space-around; align-items: center; }
+.logo { font-weight: 900; font-size: 1.5rem; }
+.logo span { color: var(--primary); }
+.nav-menu { display: flex; list-style: none; gap: 30px; }
+.nav-menu a { text-decoration: none; color: var(--dark); font-weight: 700; transition: 0.3s; }
+.nav-menu a:hover { color: var(--primary); }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: var(--neon-blue);
-    text-shadow: 0 0 10px var(--neon-blue);
-}
-
-/* Header/Hero Section */
-.hero {
+/* HERO SECTION */
+.hero-section {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: url('https://w0.peakpx.com/wallpaper/553/151/HD-wallpaper-abstract-cyber-grid-digital-art.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background: radial-gradient(circle at top right, #e0e7ff, #fff);
+    position: relative; overflow: hidden;
 }
 
-.hero h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 5rem;
-    text-transform: uppercase;
-    background: linear-gradient(to bottom, #fff 30%, var(--neon-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.5));
-}
+.hero-content { z-index: 2; }
+.badge { background: var(--primary); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+.hero-section h1 { font-size: 4rem; font-weight: 900; margin: 20px 0; line-height: 1.1; }
+.highlight { color: var(--primary); }
+.btn-primary { background: var(--gradient); color: #fff; padding: 15px 35px; border-radius: 10px; text-decoration: none; display: inline-block; box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); }
 
-/* Card Berbentuk Unik (Hexagon-ish) */
-.content-section {
-    padding: 100px 10%;
-}
+/* BENTO GRID PROFILE */
+.section-title { font-size: 2.5rem; margin-bottom: 50px; text-align: center; }
+.section-title span { color: var(--primary); }
 
-.title-glow {
-    font-family: 'Orbitron', sans-serif;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: white;
-    text-shadow: 0 0 20px var(--neon-purple);
-}
-
-.grid-layout {
+.bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
 }
 
-.neon-card {
-    background: var(--card-bg);
-    border-left: 5px solid var(--neon-blue);
-    padding: 40px;
-    position: relative;
-    transition: 0.5s;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); /* Potongan miring di pojok */
+.bento-item {
+    background: #fff; padding: 30px; border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border: 1px solid #f1f5f9;
 }
 
-.neon-card:hover {
-    transform: scale(1.05);
-    background: #1a1a1a;
-    border-left: 5px solid var(--neon-purple);
-    box-shadow: 0 0 30px rgba(188, 19, 254, 0.3);
-}
+.main-bio { grid-row: span 2; text-align: center; background: var(--gradient); color: #fff; }
+.profile-pic { width: 120px; height: 120px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.3); margin-bottom: 20px; }
 
-/* Media Elements */
-video, audio {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 1px solid var(--neon-blue);
-}
+/* KARYA GRID */
+.bg-dark { background: var(--dark); color: #fff; }
+.karya-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.karya-card { background: #1e293b; border-radius: 20px; overflow: hidden; transition: 0.3s; }
+.karya-card:hover { transform: translateY(-10px); }
+.card-img { height: 250px; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+.card-info { padding: 25px; }
 
-.btn-cyber {
-    background: transparent;
-    border: 1px solid var(--neon-blue);
-    color: var(--neon-blue);
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 20px;
-    display: inline-block;
-}
+/* MEDIA VAULT */
+.media-container { display: flex; gap: 30px; }
+.media-main { flex: 2; }
+.media-side { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.media-box { background: #fff; padding: 20px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+video { width: 100%; border-radius: 10px; }
+.btn-download { color: var(--primary); font-weight: 700; text-decoration: underline; }
 
-.btn-cyber:hover {
-    background: var(--neon-blue);
-    color: black;
-    box-shadow: 0 0 20px var(--neon-blue);
+/* FLOATING ORNAMENTS */
+.floating-box { position: absolute; background: var(--gradient); opacity: 0.1; border-radius: 20% 50%; z-index: 1; }
+.box-1 { width: 300px; height: 300px; top: -50px; left: -50px; animation: rotate 20s infinite linear; }
+.box-2 { width: 200px; height: 200px; bottom: 50px; right: -50px; background: orange; }
+
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .bento-grid, .karya-grid, .media-container { grid-template-columns: 1fr; flex-direction: column; }
+    .hero-section h1 { font-size: 2.5rem; }
 }

@@ -1,52 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Gallery</title>
+    <title>Media - Portofolio UAS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="sidebar">
-        <div class="logo">PORTFOLIO.</div>
+        <div class="logo">MY.DEV</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
-            <li><a href="projects.html">Karya & Project</a></li>
+            <li><a href="karya.html">Karya & Project</a></li>
             <li><a href="media.html" class="active">Media</a></li>
         </ul>
-        <div class="footer-nav">© 2026 UAS Project</div>
     </nav>
-
     <main class="main-content">
-        <h1 class="page-title">Galeri Media</h1>
-        
-        <div class="glass-panel">
-            <h3><span style="border-bottom: 2px solid #00d4ff;">Video</span> Profil</h3>
-            <br>
-            <video controls style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
-                <source src="assets/video_sample.mp4" type="video/mp4">
-                Browser Anda tidak mendukung video.
-            </video>
+        <div class="page-header">
+            <h1>Koleksi <span>Media.</span></h1>
         </div>
-
-        <div class="grid-container" style="margin-top: 20px;">
-            <div class="card">
-                <h3>Audio / Musik</h3>
-                <audio controls style="width: 100%; margin-top: 15px;">
-                    <source src="assets/audio_sample.mp3" type="audio/mpeg">
-                </audio>
+        <div class="grid-2">
+            <div class="content-card">
+                <h3>Video & Audio</h3>
+                <video controls><source src="assets/video.mp4"></video>
+                <audio controls style="margin-top: 20px;"><source src="assets/audio.mp3"></audio>
             </div>
-
-            <div class="card">
-                <h3>Dokumentasi</h3>
-                <img src="assets/foto_kegiatan.jpg" alt="Kegiatan" style="width: 100%; border-radius: 5px; margin-top: 10px;">
-            </div>
-
-            <div class="card" style="text-align: center;">
-                <h3>Dokumen CV</h3>
-                <p style="font-size: 0.8rem; margin: 10px 0;">Download CV lengkap saya.</p>
-                <a href="assets/cv_saya.pdf" target="_blank" class="btn-neon" style="padding: 5px 15px; font-size: 0.8rem;">Download PDF</a>
+            <div class="content-card">
+                <h3>Gambar & Dokumen</h3>
+                <img src="https://via.placeholder.com/300x150" style="width: 100%; border-radius: 15px; margin-top: 15px;">
+                <p style="margin-top: 20px;">Unduh Berkas Profil (PDF)</p>
+                <a href="assets/cv.pdf" class="btn-download">Download PDF</a>
             </div>
         </div>
     </main>

@@ -3,104 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Portofolio UAS</title>
+    <title>UAS PWEB 1 - Creative Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-animation"></div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#profile">Profile</a>
-        <a href="#karya">Karya</a>
-        <a href="#media">Media</a>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">MY<span>DEV.</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#karya">Karya</a></li>
+                <li><a href="#media">Media</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <p style="letter-spacing: 5px; color: var(--neon-blue);">FINAL PROJECT PWEB 1</p>
-        <h1>SYSTEM<br>DEVELOPER</h1>
-        <p style="max-width: 600px; margin-top: 20px; color: #888;">Selamat datang di antarmuka portofolio digital masa depan. Dibangun dengan HTML, CSS, dan JavaScript untuk memenuhi Ujian Akhir Semester.</p>
-        <a href="#profile" class="btn-cyber">Masuk Sistem</a>
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <span class="badge">UAS Pemrograman Web 1</span>
+            <h1>Digital Universe<br>Of <span class="highlight">Creative Mind</span></h1>
+            <p>Selamat datang di pusat karya digital saya. Dibangun khusus untuk UAS 2025/2026 dengan teknologi web modern.</p>
+            <div class="hero-buttons">
+                <a href="#profile" class="btn-primary">Mulai Jelajah</a>
+                <a href="#karya" class="btn-secondary">Lihat Project</a>
+            </div>
+        </div>
+        <div class="floating-box box-1"></div>
+        <div class="floating-box box-2"></div>
     </section>
 
-    <section id="profile" class="content-section">
-        <h2 class="title-glow">IDENTITY DATA</h2>
-        <div class="neon-card" style="max-width: 800px; margin: auto;">
-            <div style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
-                <img src="https://via.placeholder.com/200" style="border: 2px solid var(--neon-blue); padding: 5px;">
-                <div>
-                    <h3 style="font-size: 2rem; color: var(--neon-blue);">NAMA ANDA</h3>
-                    <p>STATUS: MAHASISWA AKTIF</p>
-                    <p>PRODI: SISTEM INFORMASI</p>
-                    <hr style="margin: 15px 0; opacity: 0.2;">
-                    <p>"Membangun masa depan melalui baris kode yang efisien dan desain yang inovatif."</p>
+    <section id="profile" class="container section-padding">
+        <h2 class="section-title">Identity <span>Profile</span></h2>
+        <div class="bento-grid">
+            <div class="bento-item main-bio">
+                <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-pic">
+                <h3>Nama Mahasiswa</h3>
+                <p>Mahasiswa Sistem Informasi</p>
+                <div class="stats">
+                    <span><b>IPK:</b> 4.0</span>
+                    <span><b>Skill:</b> Web Design</span>
+                </div>
+            </div>
+            <div class="bento-item info-box">
+                <h4>Tentang Saya</h4>
+                <p>Saya adalah seorang pengembang web yang fokus pada estetika dan fungsionalitas. Berusaha memberikan hasil terbaik untuk setiap project.</p>
+            </div>
+            <div class="bento-item tech-stack">
+                <h4>Tech Stack</h4>
+                <div class="tags">
+                    <span>HTML5</span> <span>CSS3</span> <span>JS</span> <span>PHP</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="karya" class="content-section">
-        <h2 class="title-glow">PROJECTS LOG</h2>
-        <div class="grid-layout">
-            <div class="neon-card">
-                <h3>01. E-COMMERCE</h3>
-                <p>Website toko online responsif.</p>
-                <div class="btn-cyber">Detail</div>
-            </div>
-            <div class="neon-card">
-                <h3>02. DASHBOARD</h3>
-                <p>Visualisasi data mahasiswa.</p>
-                <div class="btn-cyber">Detail</div>
-            </div>
-            <div class="neon-card">
-                <h3>03. JS GAME</h3>
-                <p>Game sederhana berbasis web.</p>
-                <div class="btn-cyber">Detail</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="media" class="content-section">
-        <h2 class="title-glow">MEDIA DATABASE</h2>
-        <div class="grid-layout">
-            <div class="neon-card">
-                <h3>IMAGE GALLERY</h3>
-                <img src="https://via.placeholder.com/300x150" style="width: 100%; margin-top: 15px;">
-            </div>
-            <div class="neon-card">
-                <h3>VIDEO FILE</h3>
-                <video controls>
-                    <source src="assets/video.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="neon-card">
-                <h3>AUDIO LOG</h3>
-                <audio controls>
-                    <source src="assets/audio.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <div class="neon-card">
-                <h3>DOCUMENT</h3>
-                <p>Curriculum Vitae (PDF)</p>
-                <a href="assets/cv.pdf" class="btn-cyber">Download PDF</a>
+    <section id="karya" class="bg-dark section-padding">
+        <div class="container">
+            <h2 class="section-title">Latest <span>Projects</span></h2>
+            <div class="karya-grid">
+                <div class="karya-card">
+                    <div class="card-img" style="background: linear-gradient(45deg, #ff416c, #ff4b2b);">PROJECT A</div>
+                    <div class="card-info">
+                        <h3>E-Commerce Web</h3>
+                        <p>Aplikasi belanja online interaktif.</p>
+                    </div>
+                </div>
+                <div class="karya-card">
+                    <div class="card-img" style="background: linear-gradient(45deg, #1fa2ff, #12d8fa);">PROJECT B</div>
+                    <div class="card-info">
+                        <h3>Company Profile</h3>
+                        <p>Landing page perusahaan modern.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 50px; color: #444;">
-        &copy; 2026 CYBER PORTFOLIO | UAS PEMROGRAMAN WEB 1
+    <section id="media" class="container section-padding">
+        <h2 class="section-title">Media <span>Vault</span></h2>
+        <div class="media-container">
+            <div class="media-main">
+                <div class="media-box">
+                    <h4>Video Presentation</h4>
+                    <video controls>
+                        <source src="video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="media-side">
+                <div class="media-box">
+                    <h4>Audio Recording</h4>
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="media-box doc-box">
+                    <h4>Curriculum Vitae</h4>
+                    <p>Format: PDF Document</p>
+                    <a href="cv.pdf" class="btn-download">Download File</a>
+                </div>
+                <div class="media-box">
+                    <h4>Gallery</h4>
+                    <img src="https://via.placeholder.com/200x100" style="width:100%; border-radius:10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - UAS PWEB 1 - Nama Anda</p>
     </footer>
 
-    <script>
-        // JavaScript untuk efek scroll halus
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

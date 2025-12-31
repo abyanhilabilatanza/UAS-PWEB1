@@ -3,29 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - UAS PWEB</title>
+    <title>Cyber Portofolio UAS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="logo">PORTFOLIO.</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li> <li><a href="profile.html">Profile</a></li>
-            <li><a href="projects.html">Karya & Project</a></li>
-            <li><a href="media.html">Media</a></li>
-        </ul>
-        <div class="footer-nav">© 2026 UAS Project</div>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#karya">Karya</a>
+        <a href="#media">Media</a>
     </nav>
 
-    <main class="main-content">
-        <h1 class="page-title">Selamat Datang</h1>
-        <div class="glass-panel hero-box">
-            <h2>Halo, Saya <span style="color: #00d4ff;">Nama Anda</span></h2>
-            <p>Mahasiswa Sistem Informasi yang siap berkarya.</p>
-            <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p>Website ini dibuat untuk memenuhi tugas UAS Pemrograman Web 1. <br> Jelajahi menu di samping untuk melihat karya saya.</p>
-            <a href="profile.html" class="btn-neon">Lihat Profil Saya</a>
+    <section id="home" class="hero">
+        <p style="letter-spacing: 5px; color: var(--neon-blue);">FINAL PROJECT PWEB 1</p>
+        <h1>SYSTEM<br>DEVELOPER</h1>
+        <p style="max-width: 600px; margin-top: 20px; color: #888;">Selamat datang di antarmuka portofolio digital masa depan. Dibangun dengan HTML, CSS, dan JavaScript untuk memenuhi Ujian Akhir Semester.</p>
+        <a href="#profile" class="btn-cyber">Masuk Sistem</a>
+    </section>
+
+    <section id="profile" class="content-section">
+        <h2 class="title-glow">IDENTITY DATA</h2>
+        <div class="neon-card" style="max-width: 800px; margin: auto;">
+            <div style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+                <img src="https://via.placeholder.com/200" style="border: 2px solid var(--neon-blue); padding: 5px;">
+                <div>
+                    <h3 style="font-size: 2rem; color: var(--neon-blue);">NAMA ANDA</h3>
+                    <p>STATUS: MAHASISWA AKTIF</p>
+                    <p>PRODI: SISTEM INFORMASI</p>
+                    <hr style="margin: 15px 0; opacity: 0.2;">
+                    <p>"Membangun masa depan melalui baris kode yang efisien dan desain yang inovatif."</p>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <section id="karya" class="content-section">
+        <h2 class="title-glow">PROJECTS LOG</h2>
+        <div class="grid-layout">
+            <div class="neon-card">
+                <h3>01. E-COMMERCE</h3>
+                <p>Website toko online responsif.</p>
+                <div class="btn-cyber">Detail</div>
+            </div>
+            <div class="neon-card">
+                <h3>02. DASHBOARD</h3>
+                <p>Visualisasi data mahasiswa.</p>
+                <div class="btn-cyber">Detail</div>
+            </div>
+            <div class="neon-card">
+                <h3>03. JS GAME</h3>
+                <p>Game sederhana berbasis web.</p>
+                <div class="btn-cyber">Detail</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="content-section">
+        <h2 class="title-glow">MEDIA DATABASE</h2>
+        <div class="grid-layout">
+            <div class="neon-card">
+                <h3>IMAGE GALLERY</h3>
+                <img src="https://via.placeholder.com/300x150" style="width: 100%; margin-top: 15px;">
+            </div>
+            <div class="neon-card">
+                <h3>VIDEO FILE</h3>
+                <video controls>
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="neon-card">
+                <h3>AUDIO LOG</h3>
+                <audio controls>
+                    <source src="assets/audio.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="neon-card">
+                <h3>DOCUMENT</h3>
+                <p>Curriculum Vitae (PDF)</p>
+                <a href="assets/cv.pdf" class="btn-cyber">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 50px; color: #444;">
+        &copy; 2026 CYBER PORTFOLIO | UAS PEMROGRAMAN WEB 1
+    </footer>
+
+    <script>
+        // JavaScript untuk efek scroll halus
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

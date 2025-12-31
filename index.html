@@ -1,122 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UAS PWEB 1 - Creative Portfolio</title>
+    <title>Home - Portofolio UAS</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo">MY<span>DEV.</span></div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#karya">Karya</a></li>
-                <li><a href="#media">Media</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <span class="badge">UAS Pemrograman Web 1</span>
-            <h1>Digital Universe<br>Of <span class="highlight">Creative Mind</span></h1>
-            <p>Selamat datang di pusat karya digital saya. Dibangun khusus untuk UAS 2025/2026 dengan teknologi web modern.</p>
-            <div class="hero-buttons">
-                <a href="#profile" class="btn-primary">Mulai Jelajah</a>
-                <a href="#karya" class="btn-secondary">Lihat Project</a>
+    <nav class="sidebar">
+        <div class="logo">MY.DEV</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="karya.html">Karya & Project</a></li>
+            <li><a href="media.html">Media</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Selamat <span>Datang.</span></h1>
+        </div>
+        <div class="content-card">
+            <h2>Digital Portfolio v1.0</h2>
+            <p style="color: #94a3b8; margin-top: 15px; line-height: 1.8;">
+                Ini adalah proyek Ujian Akhir Semester untuk mata kuliah Pemrograman Web 1. Website ini dirancang dengan konsep modern dashboard menggunakan teknologi HTML, CSS, dan interaksi JavaScript.
+            </p>
+            <div style="margin-top: 30px; display: flex; gap: 15px;">
+                <div class="project-item"><h3>UI/UX</h3><p>Design modern</p></div>
+                <div class="project-item"><h3>CODE</h3><p>Clean script</p></div>
             </div>
         </div>
-        <div class="floating-box box-1"></div>
-        <div class="floating-box box-2"></div>
-    </section>
-
-    <section id="profile" class="container section-padding">
-        <h2 class="section-title">Identity <span>Profile</span></h2>
-        <div class="bento-grid">
-            <div class="bento-item main-bio">
-                <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-pic">
-                <h3>Nama Mahasiswa</h3>
-                <p>Mahasiswa Sistem Informasi</p>
-                <div class="stats">
-                    <span><b>IPK:</b> 4.0</span>
-                    <span><b>Skill:</b> Web Design</span>
-                </div>
-            </div>
-            <div class="bento-item info-box">
-                <h4>Tentang Saya</h4>
-                <p>Saya adalah seorang pengembang web yang fokus pada estetika dan fungsionalitas. Berusaha memberikan hasil terbaik untuk setiap project.</p>
-            </div>
-            <div class="bento-item tech-stack">
-                <h4>Tech Stack</h4>
-                <div class="tags">
-                    <span>HTML5</span> <span>CSS3</span> <span>JS</span> <span>PHP</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="karya" class="bg-dark section-padding">
-        <div class="container">
-            <h2 class="section-title">Latest <span>Projects</span></h2>
-            <div class="karya-grid">
-                <div class="karya-card">
-                    <div class="card-img" style="background: linear-gradient(45deg, #ff416c, #ff4b2b);">PROJECT A</div>
-                    <div class="card-info">
-                        <h3>E-Commerce Web</h3>
-                        <p>Aplikasi belanja online interaktif.</p>
-                    </div>
-                </div>
-                <div class="karya-card">
-                    <div class="card-img" style="background: linear-gradient(45deg, #1fa2ff, #12d8fa);">PROJECT B</div>
-                    <div class="card-info">
-                        <h3>Company Profile</h3>
-                        <p>Landing page perusahaan modern.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="media" class="container section-padding">
-        <h2 class="section-title">Media <span>Vault</span></h2>
-        <div class="media-container">
-            <div class="media-main">
-                <div class="media-box">
-                    <h4>Video Presentation</h4>
-                    <video controls>
-                        <source src="video.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="media-side">
-                <div class="media-box">
-                    <h4>Audio Recording</h4>
-                    <audio controls>
-                        <source src="audio.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="media-box doc-box">
-                    <h4>Curriculum Vitae</h4>
-                    <p>Format: PDF Document</p>
-                    <a href="cv.pdf" class="btn-download">Download File</a>
-                </div>
-                <div class="media-box">
-                    <h4>Gallery</h4>
-                    <img src="https://via.placeholder.com/200x100" style="width:100%; border-radius:10px;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 - UAS PWEB 1 - Nama Anda</p>
-    </footer>
-
-    <script src="script.js"></script>
+    </main>
 </body>
 </html>

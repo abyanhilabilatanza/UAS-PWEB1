@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Media - Portofolio UAS</title>
+    <title>UAS - MEDIA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="logo">MY.DEV</div>
+    <nav class="navbar">
+        <div class="logo-container">PROJECT.X</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
-            <li><a href="karya.html">Karya & Project</a></li>
+            <li><a href="karya.html">Karya</a></li>
             <li><a href="media.html" class="active">Media</a></li>
         </ul>
     </nav>
-    <main class="main-content">
-        <div class="page-header">
-            <h1>Koleksi <span>Media.</span></h1>
-        </div>
-        <div class="grid-2">
-            <div class="content-card">
-                <h3>Video & Audio</h3>
-                <video controls><source src="assets/video.mp4"></video>
-                <audio controls style="margin-top: 20px;"><source src="assets/audio.mp3"></audio>
+    <main class="content" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80');">
+        <h1 class="big-title">MEDIA <span>GALLERY</span></h1>
+        
+        <div class="grid-container">
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-body">
+                    <h3 style="color: #00e5ff; margin-bottom: 15px;">VIDEO PRESENTASI</h3>
+                    <video controls poster="https://via.placeholder.com/800x450">
+                        <source src="assets/video.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <div class="content-card">
-                <h3>Gambar & Dokumen</h3>
-                <img src="https://via.placeholder.com/300x150" style="width: 100%; border-radius: 15px; margin-top: 15px;">
-                <p style="margin-top: 20px;">Unduh Berkas Profil (PDF)</p>
-                <a href="assets/cv.pdf" class="btn-download">Download PDF</a>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 style="color: #00e5ff; margin-bottom: 15px;">AUDIO RECORD</h3>
+                    <audio controls><source src="assets/audio.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 style="color: #00e5ff; margin-bottom: 15px;">DOKUMEN PDF</h3>
+                    <p>Curriculum Vitae Terupdate</p>
+                    <br>
+                    <a href="assets/cv.pdf" class="btn-glow" style="width: 100%; text-align: center;">DOWNLOAD PDF</a>
+                </div>
+            </div>
+
+            <div class="card" style="grid-column: span 2;">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" class="card-img" style="height: 300px;">
+                <div class="card-body"><h3>FOTO DOKUMENTASI</h3></div>
             </div>
         </div>
     </main>

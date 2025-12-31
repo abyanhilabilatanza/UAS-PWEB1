@@ -3,130 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - UAS Pemrograman Web 1</title>
+    <title>Home - UAS PWEB</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">My<span>Portfolio</span>.</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#karya">Karya & Project</a></li>
-                <li><a href="#media">Media</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+    <nav class="sidebar">
+        <div class="logo">PORTFOLIO.</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li> <li><a href="profile.html">Profile</a></li>
+            <li><a href="projects.html">Karya & Project</a></li>
+            <li><a href="media.html">Media</a></li>
+        </ul>
+        <div class="footer-nav">© 2026 UAS Project</div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1 class="animate-text">Halo, Saya <span id="typing-name"></span></h1>
-            <p>Mahasiswa Sistem Informasi | Web Developer Enthusiast</p>
-            <a href="#karya" class="btn">Lihat Karya Saya</a>
+    <main class="main-content">
+        <h1 class="page-title">Selamat Datang</h1>
+        <div class="glass-panel hero-box">
+            <h2>Halo, Saya <span style="color: #00d4ff;">Nama Anda</span></h2>
+            <p>Mahasiswa Sistem Informasi yang siap berkarya.</p>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>Website ini dibuat untuk memenuhi tugas UAS Pemrograman Web 1. <br> Jelajahi menu di samping untuk melihat karya saya.</p>
+            <a href="profile.html" class="btn-neon">Lihat Profil Saya</a>
         </div>
-    </section>
-
-    <section id="profile" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Profile Saya</h2>
-            <div class="profile-grid">
-                <div class="profile-img">
-                    <img src="https://via.placeholder.com/300" alt="Foto Profil">
-                </div>
-                <div class="profile-info">
-                    <h3>Tentang Saya</h3>
-                    <p>Saya adalah mahasiswa Ilmu Komputer yang bersemangat menciptakan solusi digital. Saya memiliki ketertarikan kuat pada desain web modern dan pengembangan perangkat lunak.</p>
-                    <br>
-                    <h3>Biodata Singkat</h3>
-                    <ul>
-                        <li><strong>Nama:</strong> Nama Anda</li>
-                        <li><strong>Prodi:</strong> Sistem Informasi</li>
-                        <li><strong>Fakultas:</strong> Ilmu Komputer</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="karya" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Karya & Project</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-header" style="background-color: #3498db;">WEB</div>
-                    <div class="card-body">
-                        <h3>Website Sekolah</h3>
-                        <p>Sistem informasi akademik sederhana menggunakan HTML & CSS.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style="background-color: #9b59b6;">DESIGN</div>
-                    <div class="card-body">
-                        <h3>UI/UX Design</h3>
-                        <p>Mockup aplikasi mobile untuk manajemen tugas.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style="background-color: #e74c3c;">APP</div>
-                    <div class="card-body">
-                        <h3>Kalkulator JS</h3>
-                        <p>Aplikasi kalkulator sederhana berbasis Javascript.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="media" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Koleksi Media</h2>
-            <div class="media-grid">
-                
-                <div class="media-item">
-                    <h4>Galeri Foto</h4>
-                    <img src="https://via.placeholder.com/400x250" alt="Dokumentasi" class="media-img">
-                </div>
-
-                <div class="media-item">
-                    <h4>Video Profil</h4>
-                    <video controls width="100%">
-                        <source src="assets/video_sample.mp4" type="video/mp4">
-                        Browser Anda tidak mendukung tag video.
-                    </video>
-                </div>
-
-                <div class="media-item">
-                    <h4>Rekaman Audio</h4>
-                    <audio controls class="audio-player">
-                        <source src="assets/audio_sample.mp3" type="audio/mpeg">
-                        Browser Anda tidak mendukung elemen audio.
-                    </audio>
-                </div>
-
-                <div class="media-item">
-                    <h4>Dokumen / CV</h4>
-                    <div class="doc-box">
-                        <p>Unduh Curriculum Vitae (CV) saya dalam format PDF.</p>
-                        <a href="assets/cv_saya.pdf" target="_blank" class="btn-outline">Download PDF</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Nama Anda. Dibuat untuk UAS Pemrograman Web 1.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    </main>
 </body>
 </html>

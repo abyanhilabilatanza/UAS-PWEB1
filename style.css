@@ -1,156 +1,145 @@
-/* Import Font Keren */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
+:root {
+    --neon-blue: #00f3ff;
+    --neon-purple: #bc13fe;
+    --dark-bg: #050505;
+    --card-bg: #121212;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
-    text-decoration: none;
-    list-style: none;
+    margin: 0; padding: 0; box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    background-color: var(--dark-bg);
     color: white;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background Animasi Berjalan */
+.bg-animation {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%);
+    z-index: -1;
+}
+
+/* Navigasi Melayang (Floating Navbar) */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: flex;
+    gap: 30px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Header/Hero Section */
+.hero {
     height: 100vh;
     display: flex;
-    overflow: hidden; /* Supaya tidak ada scroll di body utama */
-}
-
-/* --- SIDEBAR NAVIGASI (KIRI) --- */
-.sidebar {
-    width: 260px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px); /* Efek Kaca Buram */
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
     flex-direction: column;
-    padding: 2rem;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #00d4ff;
-    letter-spacing: 2px;
-    margin-bottom: 3rem;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
-
-.nav-links li {
-    margin-bottom: 1.5rem;
-}
-
-.nav-links a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.1rem;
-    transition: 0.3s;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    text-align: center;
+    background: url('https://w0.peakpx.com/wallpaper/553/151/HD-wallpaper-abstract-cyber-grid-digital-art.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #fff;
-    transform: translateX(10px); /* Efek geser saat hover */
-    text-shadow: 0 0 8px rgba(255,255,255, 0.5);
-}
-
-.footer-nav {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.3);
-}
-
-/* --- KONTEN UTAMA (KANAN) --- */
-.main-content {
-    flex: 1;
-    padding: 3rem;
-    overflow-y: auto; /* Scroll hanya di konten kanan */
-    position: relative;
-}
-
-/* Judul Halaman Unik */
-.page-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(to right, #00d4ff, #fff);
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #fff 30%, var(--neon-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fadeInDown 1s ease;
+    filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.5));
 }
 
-/* Container Kaca untuk Konten */
-.glass-panel {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2rem;
-    margin-top: 2rem;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    animation: fadeInUp 1s ease;
+/* Card Berbentuk Unik (Hexagon-ish) */
+.content-section {
+    padding: 100px 10%;
 }
 
-/* --- Tampilan HOME --- */
-.hero-box h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.title-glow {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 0 0 20px var(--neon-purple);
 }
-.btn-neon {
-    padding: 12px 30px;
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.neon-card {
+    background: var(--card-bg);
+    border-left: 5px solid var(--neon-blue);
+    padding: 40px;
+    position: relative;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); /* Potongan miring di pojok */
+}
+
+.neon-card:hover {
+    transform: scale(1.05);
+    background: #1a1a1a;
+    border-left: 5px solid var(--neon-purple);
+    box-shadow: 0 0 30px rgba(188, 19, 254, 0.3);
+}
+
+/* Media Elements */
+video, audio {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid var(--neon-blue);
+}
+
+.btn-cyber {
     background: transparent;
-    border: 2px solid #00d4ff;
-    color: #00d4ff;
-    border-radius: 5px;
-    font-weight: bold;
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
     margin-top: 20px;
     display: inline-block;
-    transition: 0.3s;
-}
-.btn-neon:hover {
-    background: #00d4ff;
-    color: #000;
-    box-shadow: 0 0 20px #00d4ff;
 }
 
-/* --- Tampilan CARD (Untuk Project & Media) --- */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.card {
-    background: rgba(0,0,0,0.3);
-    padding: 15px;
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.4s;
-}
-.card:hover {
-    transform: translateY(-10px);
-    background: rgba(255,255,255,0.1);
-}
-
-/* --- ANIMASI --- */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Mobile */
-@media (max-width: 768px) {
-    body { flex-direction: column; height: auto; overflow: auto; }
-    .sidebar { width: 100%; padding: 1rem; flex-direction: row; align-items: center; position: sticky; top: 0; z-index: 100; }
-    .nav-links { display: flex; gap: 15px; }
-    .nav-links li { margin: 0; }
-    .nav-links span { display: none; } /* Sembunyikan teks menu di HP, sisakan icon kalau ada */
-    .logo { margin: 0; font-size: 1.2rem; }
-    .footer-nav { display: none; }
-    .main-content { padding: 1.5rem; overflow: visible; }
+.btn-cyber:hover {
+    background: var(--neon-blue);
+    color: black;
+    box-shadow: 0 0 20px var(--neon-blue);
 }

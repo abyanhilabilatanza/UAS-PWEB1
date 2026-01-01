@@ -1,51 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>UAS - MEDIA</title>
+    <title>MEDIA - UAS PWEB</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo-container">PROJECT.X</div>
+        <div class="logo-container">PRO-FILE.</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="karya.html">Karya</a></li>
             <li><a href="media.html" class="active">Media</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
-    <main class="content" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80');">
-        <h1 class="big-title">MEDIA <span>GALLERY</span></h1>
-        
+    <main class="content" style="background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80');">
+        <h1 class="big-title">MEDIA <span>GALLERY.</span></h1>
         <div class="grid-container">
-            <div class="card" style="grid-column: span 2;">
-                <div class="card-body">
-                    <h3 style="color: #00e5ff; margin-bottom: 15px;">VIDEO PRESENTASI</h3>
-                    <video controls poster="https://via.placeholder.com/800x450">
-                        <source src="assets/video.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-
             <div class="card">
                 <div class="card-body">
-                    <h3 style="color: #00e5ff; margin-bottom: 15px;">AUDIO RECORD</h3>
+                    <h4 style="color: #38bdf8;">VIDEO FILE</h4>
+                    <video controls><source src="assets/video.mp4"></video>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 style="color: #38bdf8;">AUDIO FILE</h4>
                     <audio controls><source src="assets/audio.mp3"></audio>
                 </div>
             </div>
-
             <div class="card">
                 <div class="card-body">
-                    <h3 style="color: #00e5ff; margin-bottom: 15px;">DOKUMEN PDF</h3>
-                    <p>Curriculum Vitae Terupdate</p>
-                    <br>
-                    <a href="assets/cv.pdf" class="btn-glow" style="width: 100%; text-align: center;">DOWNLOAD PDF</a>
+                    <h4 style="color: #38bdf8;">DOCUMENT</h4>
+                    <p>Curriculum Vitae (PDF)</p>
+                    <br><a href="assets/cv.pdf" class="btn-glow" style="display: block; text-align: center;">DOWNLOAD</a>
                 </div>
-            </div>
-
-            <div class="card" style="grid-column: span 2;">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" class="card-img" style="height: 300px;">
-                <div class="card-body"><h3>FOTO DOKUMENTASI</h3></div>
             </div>
         </div>
     </main>

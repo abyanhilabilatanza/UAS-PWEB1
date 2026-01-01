@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>KONTAK - UAS PWEB</title>
+    <title>Kontak - Kirim Surat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo-container">PRO-FILE.</div>
-        <ul class="nav-links">
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="karya.html">Karya</a></li>
@@ -15,18 +14,17 @@
             <li><a href="kontak.html" class="active">Kontak</a></li>
         </ul>
     </nav>
-    <main class="content" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80');">
-        <h1 class="big-title">GET IN <span>TOUCH.</span></h1>
-        <div class="glass-container">
-            <form action="#">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <input type="text" placeholder="Nama Lengkap">
-                    <input type="email" placeholder="Email">
-                </div>
-                <textarea rows="5" placeholder="Pesan Anda..."></textarea>
-                <button type="submit" class="btn-glow" style="width: 100%;">KIRIM SEKARANG</button>
-            </form>
-        </div>
-    </main>
+    <div class="container">
+        <h2 style="text-align: center;">Send a Letter</h2>
+        <form style="max-width: 600px; margin: 40px auto;">
+            <input type="text" placeholder="Nama Anda" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; font-family: inherit;">
+            <input type="email" placeholder="Alamat Email" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; font-family: inherit;">
+            <textarea placeholder="Tuliskan pesan Anda di sini..." rows="6" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; font-family: inherit;"></textarea>
+            <center><button type="submit" class="btn-classic" style="border: none; cursor: pointer;">KIRIM PESAN</button></center>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2026 Crafted by [Nama Anda] | UAS PWEB 1</p>
+    </footer>
 </body>
 </html>

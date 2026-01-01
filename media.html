@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>MEDIA - UAS PWEB</title>
+    <title>Media - Arsip Digital</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo-container">PRO-FILE.</div>
-        <ul class="nav-links">
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="karya.html">Karya</a></li>
@@ -15,29 +14,23 @@
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
-    <main class="content" style="background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80');">
-        <h1 class="big-title">MEDIA <span>GALLERY.</span></h1>
-        <div class="grid-container">
-            <div class="card">
-                <div class="card-body">
-                    <h4 style="color: #38bdf8;">VIDEO FILE</h4>
-                    <video controls><source src="assets/video.mp4"></video>
-                </div>
+    <div class="container">
+        <h2>Archives & Media</h2>
+        <div class="art-grid">
+            <div class="art-card">
+                <h3>Visual Presentation</h3>
+                <video controls style="width: 100%;"><source src="assets/video.mp4"></video>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h4 style="color: #38bdf8;">AUDIO FILE</h4>
-                    <audio controls><source src="assets/audio.mp3"></audio>
-                </div>
+            <div class="art-card">
+                <h3>Audio Log</h3>
+                <audio controls style="width: 100%;"><source src="assets/audio.mp3"></audio>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h4 style="color: #38bdf8;">DOCUMENT</h4>
-                    <p>Curriculum Vitae (PDF)</p>
-                    <br><a href="assets/cv.pdf" class="btn-glow" style="display: block; text-align: center;">DOWNLOAD</a>
-                </div>
+            <div class="art-card">
+                <h3>Documents</h3>
+                <p>Curriculum Vitae (PDF)</p>
+                <a href="assets/cv.pdf" class="btn-classic" style="padding: 5px 15px; font-size: 0.8rem;">Unduh File</a>
             </div>
         </div>
-    </main>
+    </div>
 </body>
 </html>

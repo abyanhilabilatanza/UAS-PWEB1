@@ -1,123 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Montserrat:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lora:ital@0,400;1,600&display=swap');
 
 * {
     margin: 0; padding: 0; box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #050505;
-    color: white;
-    min-height: 100vh;
-    overflow-x: hidden;
+    /* Tekstur kertas tua */
+    background-color: #f4f1ea;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    color: #2c2c2c;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
 }
 
-/* Sidebar Navigasi */
-.navbar {
-    width: 280px;
-    height: 100vh;
-    position: fixed;
-    background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(15,23,42,0.9) 100%);
-    backdrop-filter: blur(20px);
-    border-right: 2px solid #38bdf8;
+/* Navigasi Klasik */
+nav {
+    background: #2c2c2c;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+nav ul {
     display: flex;
-    flex-direction: column;
-    padding: 50px 30px;
-    z-index: 100;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
 }
 
-.logo-container {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 1.5rem;
-    color: #38bdf8;
-    text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
-    margin-bottom: 50px;
-}
-
-.nav-links { list-style: none; }
-.nav-links li { margin-bottom: 20px; }
-.nav-links a {
+nav a {
     text-decoration: none;
-    color: #94a3b8;
-    font-weight: 700;
-    font-size: 0.9rem;
+    color: #f4f1ea;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    transition: 0.3s;
     text-transform: uppercase;
-    transition: 0.4s;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #38bdf8;
-    padding-left: 10px;
-    text-shadow: 0 0 10px #38bdf8;
+nav a:hover, nav a.active {
+    color: #d4af37; /* Warna emas klasik */
 }
 
-/* Area Konten Utama */
-.content {
-    margin-left: 280px;
-    padding: 60px;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.glass-container {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 30px;
+/* Container utama */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
     padding: 40px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    background: white;
+    box-shadow: 20px 20px 0px #d1ccc0;
+    border: 1px solid #d1ccc0;
 }
 
-h1.big-title {
-    font-size: 4rem;
-    font-weight: 900;
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #38bdf8, #818cf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-/* Grid & Cards */
-.grid-container {
+.art-border {
+    border: 2px solid #2c2c2c;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Gaya Grid untuk Karya & Media */
+.art-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     margin-top: 30px;
 }
 
-.card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.1);
+.art-card {
+    background: #fafafa;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
     transition: 0.4s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: #38bdf8;
+.art-card:hover {
+    transform: rotate(-2deg); /* Efek miring seni */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
 }
 
-.card-img { width: 100%; height: 180px; object-fit: cover; }
-.card-body { padding: 20px; }
-
-/* Media & Form */
-video, audio { width: 100%; border-radius: 10px; margin-top: 10px; }
-input, textarea {
-    width: 100%; padding: 15px; background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 10px; margin-bottom: 15px;
+.art-card img {
+    width: 100%;
+    filter: sepia(30%); /* Efek foto lama */
 }
 
-.btn-glow {
-    padding: 15px 30px; background: #38bdf8; color: #000;
-    border-radius: 10px; text-decoration: none; font-weight: 800;
-    display: inline-block; border: none; cursor: pointer;
+/* Tombol */
+.btn-classic {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #2c2c2c;
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    margin-top: 20px;
+    transition: 0.3s;
 }
 
-@media (max-width: 1024px) {
-    .navbar { width: 100%; height: auto; position: relative; padding: 20px; }
-    .content { margin-left: 0; padding: 20px; }
+.btn-classic:hover {
+    background: #d4af37;
+    color: #2c2c2c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #777;
 }

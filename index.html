@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>The Art of Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Cyber Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 80px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .stat-item { text-align: center; }
+        .stat-item h2 { color: #00d4ff; font-size: 2.5rem; margin-bottom: 5px; }
+        .stat-item p { color: #ccc; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">&lt;DEV/&gt;</div>
+        <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="karya.html">Karya</a></li>
@@ -14,17 +33,43 @@
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
+
     <div class="container">
-        <center>
-            <div class="art-border">
-                <p>EST. 2026</p>
+        <div class="hero-section">
+            <div class="hero-text">
+                <h3>Halo, Saya <span style="color: #00d4ff;">Abyan Hilabi Latanza</span></h3>
+                <h1>I Build <span id="typing-text"></span><span style="animation: blink 1s infinite">|</span></h1>
+                <p>Mahasiswa Sistem Informasi yang berfokus pada Modern Web Design dan Interactive User Interface.</p>
+                <div style="margin-top: 30px;">
+                    <a href="karya.html" class="btn-tech">Lihat Project</a>
+                    <a href="kontak.html" style="color: white; margin-left: 20px; text-decoration: none; border-bottom: 1px solid white;">Hubungi Saya</a>
+                </div>
             </div>
-            <h1 style="font-size: 4rem;">Curated Works</h1>
-            <p style="font-style: italic; max-width: 600px;">"Seni bukan hanya tentang apa yang dilihat, tapi tentang apa yang membuat orang lain merasakan."</p>
-            <hr style="width: 50px; margin: 30px 0; border: 1px solid #d4af37;">
-            <p>Selamat datang di galeri digital saya. Website ini adalah hasil eksplorasi teknis dan estetika untuk memenuhi Ujian Akhir Semester Pemrograman Web 1.</p>
-            <a href="karya.html" class="btn-classic">Jelajahi Galeri</a>
-        </center>
+            <div class="hero-img">
+                <img src="https://via.placeholder.com/400" alt="Foto Profil" style="box-shadow: 0 0 30px rgba(0, 212, 255, 0.3); border-radius: 20px;">
+            </div>
+        </div>
+
+        <div class="stats-container reveal">
+            <div class="stat-item">
+                <h2>10+</h2>
+                <p>Projects</p>
+            </div>
+            <div class="stat-item">
+                <h2>5+</h2>
+                <p>Certificates</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Learning Path</p>
+            </div>
+            <div class="stat-item">
+                <h2>01</h2>
+                <p>Year Experience</p>
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

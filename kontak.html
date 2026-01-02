@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Kontak - Kirim Surat</title>
+    <title>Kontak - Cyber Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">&lt;DEV/&gt;</div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="karya.html">Karya</a></li>
@@ -14,17 +16,51 @@
             <li><a href="kontak.html" class="active">Kontak</a></li>
         </ul>
     </nav>
+
     <div class="container">
-        <h2 style="text-align: center;">Send a Letter</h2>
-        <form style="max-width: 600px; margin: 40px auto;">
-            <input type="text" placeholder="Nama Anda" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; font-family: inherit;">
-            <input type="email" placeholder="Alamat Email" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; font-family: inherit;">
-            <textarea placeholder="Tuliskan pesan Anda di sini..." rows="6" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; font-family: inherit;"></textarea>
-            <center><button type="submit" class="btn-classic" style="border: none; cursor: pointer;">KIRIM PESAN</button></center>
-        </form>
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 3rem;">Get in <span style="color: #00d4ff;">Touch.</span></h1>
+            <p style="color: #ccc;">Silakan hubungi saya melalui kontak di bawah ini.</p>
+        </div>
+
+        <div class="grid-box">
+            <div class="card" style="text-align: center;">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <h3>WhatsApp / HP</h3>
+                <p>+62 812-3456-7890</p>
+                <p>Siap dihubungi 24/7</p>
+                <a href="https://wa.me/6281234567890" class="btn-tech" style="margin-top: 15px; font-size: 0.8rem;">Chat WA</a>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <h3>Alamat</h3>
+                <p>Jl. Teknologi No. 404</p>
+                <p>Jakarta Selatan, DKI Jakarta</p>
+                <a href="#" class="btn-tech" style="margin-top: 15px; font-size: 0.8rem;">Lihat Maps</a>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3>Email</h3>
+                <p>mahasiswa@kampus.ac.id</p>
+                <p>business@dev.com</p>
+                <a href="mailto:mahasiswa@kampus.ac.id" class="btn-tech" style="margin-top: 15px; font-size: 0.8rem;">Kirim Email</a>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <i class="fab fa-instagram contact-icon"></i>
+                <h3>Social Media</h3>
+                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                </div>
+                <p style="margin-top: 10px;">@username_anda</p>
+            </div>
+        </div>
     </div>
-    <footer>
-        <p>&copy; 2026 Crafted by [Nama Anda] | UAS PWEB 1</p>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

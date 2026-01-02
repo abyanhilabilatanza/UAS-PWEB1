@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Media - Arsip Digital</title>
+    <meta charset="UTF-8">
+    <title>Media Gallery - Cyber Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+       
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 10px 25px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid #00d4ff;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: #00d4ff;
+            box-shadow: 0 0 15px rgba(0,212,255,0.5);
+        }
+        .media-content {
+            display: none; 
+        }
+        .media-content.active {
+            display: block; 
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">&lt;DEV/&gt;</div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="karya.html">Karya</a></li>
@@ -14,23 +50,83 @@
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
+
     <div class="container">
-        <h2>Archives & Media</h2>
-        <div class="art-grid">
-            <div class="art-card">
-                <h3>Visual Presentation</h3>
-                <video controls style="width: 100%;"><source src="assets/video.mp4"></video>
+        <h1 style="text-align: center; margin-bottom: 20px;">Media <span style="color: #00d4ff;">Library.</span></h1>
+        
+        <div class="tab-menu">
+            <button class="tab-btn active" onclick="openMedia(event, 'video')">Video</button>
+            <button class="tab-btn" onclick="openMedia(event, 'audio')">Audio</button>
+            <button class="tab-btn" onclick="openMedia(event, 'foto')">Foto</button>
+            <button class="tab-btn" onclick="openMedia(event, 'dokumen')">Dokumen</button>
+        </div>
+
+        <div id="video" class="media-content active">
+            <div class="grid-box">
+                <div class="card">
+                    <video controls style="width: 100%; border-radius: 10px;"><source src="assets/video1.mp4" type="video/mp4"></video>
+                    <p style="margin-top:10px;">Project Demo 1</p>
+                </div>
+                <div class="card">
+                    <video controls style="width: 100%; border-radius: 10px;"><source src="assets/video2.mp4" type="video/mp4"></video>
+                    <p style="margin-top:10px;">Vlog Kampus</p>
+                </div>
             </div>
-            <div class="art-card">
-                <h3>Audio Log</h3>
-                <audio controls style="width: 100%;"><source src="assets/audio.mp3"></audio>
+        </div>
+
+        <div id="audio" class="media-content">
+            <div class="grid-box">
+                <div class="card" style="text-align: center;">
+                    <img src="https://via.placeholder.com/150/00d4ff/ffffff?text=Album+1" style="width: 120px; border-radius: 10px; margin-bottom: 15px;">
+                    <audio controls style="width: 100%;"><source src="assets/audio1.mp3" type="audio/mpeg"></audio>
+                    <p>Music Study</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <img src="https://via.placeholder.com/150/302b63/ffffff?text=Album+2" style="width: 120px; border-radius: 10px; margin-bottom: 15px;">
+                    <audio controls style="width: 100%;"><source src="assets/audio2.mp3" type="audio/mpeg"></audio>
+                    <p>Podcast Tech</p>
+                </div>
             </div>
-            <div class="art-card">
-                <h3>Documents</h3>
-                <p>Curriculum Vitae (PDF)</p>
-                <a href="assets/cv.pdf" class="btn-classic" style="padding: 5px 15px; font-size: 0.8rem;">Unduh File</a>
+        </div>
+
+        <div id="foto" class="media-content">
+            <div class="grid-box" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card" style="padding: 5px;"><img src="https://via.placeholder.com/300x200" style="width:100%; border-radius:10px;"></div>
+                <div class="card" style="padding: 5px;"><img src="https://via.placeholder.com/300x200/00d4ff" style="width:100%; border-radius:10px;"></div>
+                <div class="card" style="padding: 5px;"><img src="https://via.placeholder.com/300x200/302b63" style="width:100%; border-radius:10px;"></div>
+            </div>
+        </div>
+
+        <div id="dokumen" class="media-content">
+            <div class="grid-box">
+                <div class="card">
+                    <h3>Curriculum Vitae</h3>
+                    <a href="assets/cv.pdf" class="btn-tech" style="margin-top: 10px; display: block; text-align: center;">Download PDF</a>
+                </div>
+                <div class="card">
+                    <h3>Sertifikat</h3>
+                    <a href="assets/cert.pdf" class="btn-tech" style="margin-top: 10px; display: block; text-align: center;">Download PDF</a>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        
+        function openMedia(evt, category) {
+            var i, content, buttons;
+            content = document.getElementsByClassName("media-content");
+            for (i = 0; i < content.length; i++) {
+                content[i].classList.remove("active");
+            }
+            buttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            document.getElementById(category).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
